@@ -16,7 +16,7 @@ public class CountryController {
 
 	@RequestMapping(value="/test", method=RequestMethod.GET, headers = "Accept=application/json")
 	public String getTest(){
-		return "A Simple JSON Based REST API:: 1. /countries   2. /country/{id}  ";
+		return "A Simple JSON Based REST API:: 1. /countries   XYYYYY  2. /country/{id}  ";
 	}
 	
 	@RequestMapping(value = "/countries", method = RequestMethod.GET, headers = "Accept=application/json")
