@@ -14,6 +14,11 @@ import org.anup.Country;
 @RestController
 public class CountryController {
 
+	@RequestMapping(value="/", method=RequestMethod.GET, headers = "Accept=application/json")
+	public String getRoot(){
+		return "Root Element JSON Based REST API:: 1. /countries   XYYYYY  2. /country/{id}  ";
+	}
+
 	@RequestMapping(value="/test", method=RequestMethod.GET, headers = "Accept=application/json")
 	public String getTest(){
 		return "A Simple JSON Based REST API:: 1. /countries   XYYYYY  2. /country/{id}  ";
@@ -41,10 +46,10 @@ public class CountryController {
 
 	// Utiliy method to create country list.
 	public List<Country> createCountryList() {
-		Country indiaCountry = new Country(1, "India");
-		Country chinaCountry = new Country(4, "China");
-		Country nepalCountry = new Country(3, "Nepal");
-		Country bhutanCountry = new Country(2, "Bhutan");
+		Country indiaCountry = new Country(1, "India", "Anup Rungta");
+		Country chinaCountry = new Country(4, "China", "Neha Rungta");
+		Country nepalCountry = new Country(3, "Nepal", "Ayan Rungta");
+		Country bhutanCountry = new Country(2, "Bhutan", "Aryan Rungta");
 
 		List<Country> listOfCountries = new ArrayList<Country>();
 		listOfCountries.add(indiaCountry);
